@@ -9,7 +9,7 @@ const app = express();
 app.use(express.static(path.resolve(__dirname, '../game-101/build')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cors());
+// app.use(cors());
 
 // User requests
 require('./users.js')(app);

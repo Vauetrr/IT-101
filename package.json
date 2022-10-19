@@ -8,7 +8,7 @@
   "scripts": {
     "client-build": "cd game-101 && npm install && npm run build",
     "server-build": "cd game-api && npm install",
-    "start": "cd game-api && npm start",
+    "start": "cd game-101 && serve -p 4000 -s build",
     "heroku-postbuild": "npm run client-build && npm run server-build"
   },
   "repository": {

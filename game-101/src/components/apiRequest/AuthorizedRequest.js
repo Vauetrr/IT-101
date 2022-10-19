@@ -1,4 +1,5 @@
-const API_ENDPOINT = "http://localhost:4000"
+// const API_ENDPOINT = "http://localhost:4000"
+const API_ENDPOINT = ""
 
 export async function GetLoginResponse(username, password) {
   try {

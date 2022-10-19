@@ -28,7 +28,7 @@ require('./summaries.js')(app);
 
 // TCP connection
 app.get('*', (req, res) => { 
-  console.log("doing a frontend route");
+  console.log("doing a frontend route, route: %s", req.url);
   res.sendFile(path.resolve(__dirname, '../game-101/build/index.html')); 
 });
 app.set('port', process.env.PORT || 4000);

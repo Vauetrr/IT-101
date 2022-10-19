@@ -27,7 +27,10 @@ require('./teammates.js')(app);
 require('./summaries.js')(app);
 
 // TCP connection
-app.get('*', (req, res) => { res.sendFile(path.resolve(__dirname, '../game-101/build/index.html')); });
+app.get('*', (req, res) => { 
+  console.log("doing a frontend route");
+  res.sendFile(path.resolve(__dirname, '../game-101/build/index.html')); 
+});
 app.set('port', process.env.PORT || 4000);
 app.listen(app.get('port'), () => {
   console.log(`Express web app available at localhost: ${app.get('port')}`);
